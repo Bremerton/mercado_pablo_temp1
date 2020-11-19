@@ -1,7 +1,10 @@
-let XX: number;
-let item: void;
+let tempf = 60
 while (true) {
-    console.log("Current Room Temperature: XX°F - XX°C " + " - Temperature (F): " + input.temperature(TemperatureUnit.Fahrenheit) + " - Temperature (C): " + input.temperature(TemperatureUnit.Celsius))
-    XX = 0
-    item = console.log("Temperature (F): " + input.temperature(TemperatureUnit.Fahrenheit))
+    console.log("temperature" + input.temperature(TemperatureUnit.Fahrenheit))
+    if (input.temperature(TemperatureUnit.Fahrenheit) > tempf) {
+        light.setPixelColor(6, light.rgb(255, 0, 0))
+    } else {
+        light.clear()
+    }
+    
 }
