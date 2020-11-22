@@ -1,9 +1,10 @@
-tempf = 60
+x = input.temperature(TemperatureUnit.FAHRENHEIT)
+y = input.temperature(TemperatureUnit.CELSIUS)
 while True:
-    print("temperature" + input.temperature(TemperatureUnit.FAHRENHEIT))
-    if input.temperature(TemperatureUnit.FAHRENHEIT) > tempf:
-        light.set_pixel_color(6, light.rgb(255, 0, 0))
-    else :
-        light.clear()
-
-
+        print("Temperature is: " + x + "F - " +y+ "C")
+        if x>70:
+            light.set_all(light.rgb(255,0,0))   
+        elif x<70 and x>40:
+            light.set_all(light.rgb(0,255,0)) 
+        else:
+            light.set_all(light.rgb(0,0,255))

@@ -1,10 +1,13 @@
-let tempf = 60
+let x = input.temperature(TemperatureUnit.Fahrenheit)
+let y = input.temperature(TemperatureUnit.Celsius)
 while (true) {
-    console.log("temperature" + input.temperature(TemperatureUnit.Fahrenheit))
-    if (input.temperature(TemperatureUnit.Fahrenheit) > tempf) {
-        light.setPixelColor(6, light.rgb(255, 0, 0))
+    console.log("Temperature is: " + x + "F - " + y + "C")
+    if (x > 70) {
+        light.setAll(light.rgb(255, 0, 0))
+    } else if (x < 70 && x > 40) {
+        light.setAll(light.rgb(0, 255, 0))
     } else {
-        light.clear()
+        light.setAll(light.rgb(0, 0, 255))
     }
     
 }
